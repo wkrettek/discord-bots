@@ -5,6 +5,7 @@ import discord
 from discord.ext import commands
 from discord.ext.commands import CommandNotFound
 import random
+import time
 
 
 # OpenAI defs
@@ -88,6 +89,16 @@ async def on_command_error(ctx, error):
         # Ignore command not found errors
         return
     raise error
+
+@client.command()
+async def ping(ctx, message):
+	bot_id = client.user.id
+	if str(bot_id) in ctx.message.content:
+		timestamp = ctx.message.created_at.timestamp()
+		now = time.time()
+		latency = round(now - timestamp)
+		response = f"Pong! Latency {latency} ms"
+		await ctx.send(response)
 
 # Handle sleep
 @client.command()
