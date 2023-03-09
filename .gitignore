@@ -1,0 +1,42 @@
+# Ignore compiled Python files
+*.pyc
+*.pyo
+__pycache__
+
+# Ignore Python virtual environments
+venv/
+env/
+.venv/
+.venv2/
+
+# Ignore pipenv lock file
+Pipfile.lock
+
+# Ignore poetry lock file
+poetry.lock
+
+# Ignore other dependencies
+lib/
+lib64/
+dist/
+build/
+*.egg-info/
+
+# Ignore compiled binary files
+target/
+
+# Ignore editor and IDE temporary files
+*.swp
+*.swo
+*.swm
+*.bak
+*.tmp
+*.d
+*.txt~
+*.orig
+
+# Ignore cargo.lock, which records exact versions of dependencies
+Cargo.lock
+
+# Ignore compiled documentation
+doc/
