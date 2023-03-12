@@ -9,7 +9,6 @@ use reqwest::header::{HeaderMap, AUTHORIZATION, CONTENT_TYPE};
 use serde::{Deserialize, Serialize};
 use serde_json;
 use std::time::{SystemTime, UNIX_EPOCH};
-use serenity::http::typing::Typing;
 
 struct Handler;
 const URL: &str = "https://api.openai.com/v1/chat/completions";
